@@ -34,31 +34,31 @@ public class MarketDataFuturesExample {
     
     
     public void start() {
-         InteractiveBrokersClientInterface ibClient = InteractiveBrokersClient.getInstance("localhost", 7999, 1);
+         InteractiveBrokersClientInterface ibClient = InteractiveBrokersClient.getInstance("localhost", 7497, 1);
         ibClient.connect();
         
         
         FuturesTicker esTicker=  new FuturesTicker();
         esTicker.setSymbol("ES");
-        esTicker.setExpiryMonth(3);
-        esTicker.setExpiryYear(2017);
+        esTicker.setExpiryMonth(12);
+        esTicker.setExpiryYear(2019);
         esTicker.setExchange(Exchange.GLOBEX);
 
         
-        Commodity vix = Commodity.VIX_FUTURES_CFE;
+        Commodity si = Commodity.SILVER_NYMEX;
         Commodity es = Commodity.SP500_INDEX_MINI_GLOBEX;
         
         
         FuturesTicker hsi = new FuturesTicker();
         hsi.setSymbol("HSI");
-        hsi.setExpiryMonth(2);
-        hsi.setExpiryYear(2017);
+        hsi.setExpiryMonth(12);
+        hsi.setExpiryYear(2019);
         hsi.setExchange(Exchange.HKFE);
         hsi.setCurrency("HKD");
         
         
-        FuturesTicker vixTicker = FuturesTicker.getInstance(vix, 3, 2017);
-        FuturesTicker zw = FuturesTicker.getInstance(Commodity.WHEAT_ECBOT, 3, 2017);
+        FuturesTicker vixTicker = FuturesTicker.getInstance(si, 12, 2019);
+        // FuturesTicker zw = FuturesTicker.getInstance(Commodity.WHEAT_ECBOT, 12, 2019);
         
         ibClient.subscribeLevel1(vixTicker, (ILevel1Quote quote) -> {
             System.out.println("Received Quote: " + quote );

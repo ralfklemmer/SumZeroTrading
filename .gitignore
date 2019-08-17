@@ -9,6 +9,10 @@ target/
 nbactions.xml
 nb-configuration.xml
 
+#IntelliJ
+.idea/
+*.iml
+
 # Class Files #
 *.class
 
@@ -30,3 +34,4 @@ nb-configuration.xml
 /implementations/market-data-api/bitmex-market-data-api-impl/nbproject/
 /commons/bitmex-common-api/nbproject/
 /implementations/historical-data-api/bitmex-historical-data-api-imple/nbproject/
+

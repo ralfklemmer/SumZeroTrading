@@ -36,7 +36,6 @@ import com.sumzerotrading.broker.order.OrderEventListener;
 import com.sumzerotrading.broker.order.OrderStatus;
 import com.sumzerotrading.broker.order.TradeOrder;
 import com.sumzerotrading.data.ComboTicker;
-import com.sumzerotrading.data.InstrumentType;
 import com.sumzerotrading.data.SumZeroException;
 import com.sumzerotrading.data.Ticker;
 import com.sumzerotrading.ib.BaseIBConnectionDelegate;
@@ -537,7 +536,7 @@ public class InteractiveBrokersBroker extends BaseIBConnectionDelegate implement
             ibOrder.m_parentId = Integer.parseInt(order.getParentOrderId());
         }
 
-        if (order.getDuration() == TradeOrder.Duration.GOOD_UTNIL_TIME) {
+        if (order.getDuration() == TradeOrder.Duration.GOOD_UNTIL_TIME) {
             if (order.getGoodUntilTime() != null) {
                 ibOrder.m_goodTillDate = getFormattedDate(order.getGoodUntilTime());
             } else {

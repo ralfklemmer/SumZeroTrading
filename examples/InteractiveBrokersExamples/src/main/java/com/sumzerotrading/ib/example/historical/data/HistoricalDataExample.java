@@ -21,7 +21,7 @@ public class HistoricalDataExample {
     
     
     public void requestHistoricalData() {
-        InteractiveBrokersClientInterface client = InteractiveBrokersClient.getInstance("localhost", 6468, 1);
+        InteractiveBrokersClientInterface client = InteractiveBrokersClient.getInstance("localhost", 7497, 1);
         client.connect();
         
         StockTicker ticker = new StockTicker("AMZN");

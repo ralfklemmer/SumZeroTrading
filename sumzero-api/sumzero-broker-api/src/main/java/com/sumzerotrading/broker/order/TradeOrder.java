@@ -39,7 +39,7 @@ public class TradeOrder implements Serializable {
 
     public enum Duration {
 
-        DAY, GOOD_UNTIL_CANCELED, GOOD_UTNIL_TIME, FILL_OR_KILL, MARKET_ON_OPEN
+        DAY, GOOD_UNTIL_CANCELED, GOOD_UNTIL_TIME, FILL_OR_KILL, MARKET_ON_OPEN
     };
 
 
